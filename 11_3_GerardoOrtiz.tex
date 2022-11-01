@@ -1,0 +1,177 @@
+\input{../skeleton}
+\input{../colores}
+
+\title{\textbf{SP 22O\\Entrega semanal 2}}
+\author{Gerardo Ortíz Montúfar}
+\date{Octubre 27, 2022}
+
+\begin{document}
+\maketitle
+
+\textbf{Proyecto: Medición de la cantidad de grasa fetal a través
+de ultrasonido y Deep Learning}
+
+\section{Analizando el estado de la cuestión}
+
+\begin{enumerate}
+	\item \textbf{En todo problema de investigación existe un conocimiento previo (antecedentes) a partir del cual se
+formulan interrogantes. Una interrogante es significativa con relación al conocimiento de cierto objeto
+de estudio siempre que identifique: dificultades, contradicciones, debilidades o vacíos. Analiza el
+contenido de alguna(s) de las referencias que forme(n) parte del estado del arte de tu proyecto (lo que
+ya se ha hecho alrededor del tema específico u objeto de estudio) y redacta una pregunta de
+investigación resultado de ese análisis. Menciona también si se relaciona con dificultades,
+contradicciones, debilidades y/o vacíos alrededor de ese conocimiento previo plasmado en la referencia
+bajo análisis (fundamenta tu respuesta).}
+	
+	\vspace{5mm}
+	En torno a este proyecto se han realizado diversas
+	técnicas para la detección temprana del IUGR (Intrauterine
+	Groth Restriction) que incluyen cardiotocografía, ecografía
+	con Doppler, medición del peso fetal mediante medidas
+	biométricas. Sin embargo, estos tienen cierta tasa de 
+	medición.
+	Los métodos de palpación abdominal y medición de la altura 
+	del fondo  tienen bajas tasas de detección del IUGR. 
+	
+	Las 
+	mediciones a través de Doppler para evaluación del bienestar
+	fetal y detección temprana de IUGR como el de la 
+	arteria uterina, umbilical, cerebral, índice 
+	cerebro-placentario, del conducto venoso y del itsmo aórtico.
+	Tiene poca sensibilidad y especificidad para predecir
+	resultados adversos del SGA (Small for Gestational Age)\citep{sharma2016intrauterine}.
+	Esto nos da la necesidad de buscar más métodos que nos generen
+	una predicción más certera de la restricción de crecimiento
+	para evitarla.
+	
+	Sumado a esto los exámenes clínicos de recién nacidos con
+	IUGR tienen variadas características de desnutrición de las
+	cuales podemos en listar las siguientes
+	\citep{sharma2016intrauterine}:
+	\begin{itemize}
+		\item Cabeza grande en comparación con el cuerpo..
+		\item Grasa bucal ausente.
+		\item Disminución de la masa muscular esquelética y grasa
+		subcutánea.
+		\item Piel floja.
+		\item Uñas largas.
+		\item Bebé ansioso e hiperalerta.
+		\item Genitales femeninos de apariencia menos madura.
+		debido a la falta de grasa.
+	\end{itemize}
+	
+	Tomando esto en cuenta se ha propuesto medir la cantidad de
+	grasa como un posible indicador para predecir el IUGR y 
+	evitarlo De este modo la pregunta de investigación sería 
+	¿Por medio de la medición	de la grasa fetal es posible
+	predecir la	restricción de crecimiento?
+	
+	La primer complicación con la que nos encontramos es cómo
+	medir la grasa fetal por lo que hay que desarrollar métodos
+	con los que podamos cuantificarla para responder la pregunta
+	planteada anteriormente. Tampoco se tiene garantía de que 
+	se pueda cuantificar por medio de Deep Learning en ultra 
+	sonido.
+	
+	\item \textbf{Elige uno de los documentos que has considerado como referencia bibliográfica para plantear tu
+proyecto (súbelo a tu carpeta) y menciona en cuál de las siguientes categorías se encuentra (fundamenta
+tu respuesta)}
+	\begin{enumerate}
+		\item \underline{Resume el conocimiento previo sobre el tema de tu proyecto y te ayudará para el} 
+		
+		\underline{planteamiento,
+formulación y afinamiento del problema que abordarás.}
+		\item Se acerca en gran medida al planteamiento del problema específico que tienes a la fecha.
+	\end{enumerate}
+	
+	Título: Intrauterine Growth Restriction: Antenatal and Postnatal
+Aspects
+
+	Elegí el inciso a) ya que el artículo describe qué es la 
+	restricción del crecimiento intrauterino, sus posibles causas,
+	de que forma se puede predecir, prevenir y diagnosticar. Así
+	como las consecuencias que esta patología puede traerle en 
+	su etapa de desarrollo posnatal y una breve introducción a las
+	teorías más aceptadas que respaldan la información contenida
+	en el artículo.
+	
+	\item \textbf{Propón dos frases que utilizarás en un buscador para actualizar tu revisión sobre el estado de la cuestión
+de tu proyecto (fundamenta tu respuesta).}
+	\begin{itemize}
+		\item Arquitecturas de Deep Learning: Para catalogar
+		cuales pueden servir para este propósito, me han sugerido 
+		Resnet50, VGG19, Autoencoder. La pregunta aquí es 
+		¿Qué arquitectura es más optima o me ayudará a lograr la
+		meta?
+		
+		\item Medición de grasa fetal y posparto en IUGR:
+		Para extender la información que poseo sobre la masa
+		grasa en bebés recién nacidos y por si hay alguna 
+		actualización de algún método que aporte a este proyecto
+	\end{itemize}
+\end{enumerate}
+
+\section{Analizando “El título”, “El tema” y “Las delimitaciones temporales y espaciales”}
+
+\begin{enumerate}
+	\item \textbf{Elige un artículo o tesis relacionados con el tema de tu proyecto (o de tu interés en caso de que todavía
+no tengas elegido tu proyecto) y agrega la referencia, la liga o el propio artículo a la carpeta con tu
+nombre. A partir de la lectura del título, el resumen y/o la introducción contesta a las siguientes
+preguntas:}
+
+Título: Intrauterine Growth Restriction: Antenatal and Postnatal
+Aspects
+
+	\begin{itemize}
+		\item ¿El título tiene las características que se mencionan en el libro de Salmerón y Suárez?
+Fundamenta tu respuesta.
+		
+				Identifico al problema el cuál es la restricción
+				intrauterina del crecimiento y el tema que son 
+				los aspectos antenatal y posnatal. En el título
+				se observa temporalidad al subrayar que se
+				detallan aspectos antes y después del parto.
+				Por otro lado, no observo espacialidad ya que no
+				se especifica un lugar. Aunque el artículo es Indi
+		
+		\item ¿Cuál dirías que fue la cuestión particular a estudiar? (es decir, los aspectos de un fenómeno o
+proceso cuya investigación mereció la pena comprometerse) fundamenta tu respuesta.
+
+		Los aspectos de un fenómeno ya que se describe
+		detalladamente una patología incluyendo causas,
+		consecuencias, prevención, predicción, tipos (variantes
+		del fenómeno), patrones (signos)
+
+		\item ¿Identificas alguna mención de algo que se podría considerar como límites temporales o
+espaciales? Fundamenta tu respuesta
+		
+		Establecen las descripciones antes y después del embarazo
+		por lo que es un límite temporal. Espaciales no están
+		delimitados pero dentro de los institutos implicados 
+		muchos son de la India
+		
+		\item ¿Se enuncian actores, instituciones o lugares?
+		
+		Sí, los principales actores o autores se mencionan en el
+		artículo así como las instituciones implicadas. Dentro del
+		documento
+		
+		\item Con base en el análisis del resumen/introducción ¿El autor cumple con lo que en el título
+promete haber estudiado? ¿Delimita claramente el problema a resolver? Fundamenta tu respuesta
+		
+		Abarca los puntos esperados, aunque no los delimita del
+		todo y al leer el atículo hay más información de la
+		esperada. Lo cuál no es un punto en contra, si no
+		enriquece el texto, pero convendría mencionar algunos
+		aspectos a tratar en la introducción de otra forma 
+		alguien podría dejarlo de lado al leer sólo la
+		introducción.
+
+	\end{itemize}
+\end{enumerate}
+
+\setcitestyle{author, \open{((},\close{))}}%formato autor ,(año)
+\bibliographystyle{apalike} %referencias APA sin ningún paquete
+\bibliography{ref}
+
+\end{document}
